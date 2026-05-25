@@ -1,614 +1,781 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sateesh Kumar Portfolio</title>
+    <title>Sateesh Kumar Nunna | Senior Data Engineer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta name="description" content="Senior Data Engineer with expertise in AWS, Azure, GCP, Snowflake, Spark, and Python. Available for data engineering and AI/ML roles.">
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+      /* ===== ABOUT ===== */
+      .about-mf .box-shadow-full { padding-top: 4rem; padding-bottom: 4rem; }
+      .about-mf .about-img { margin-bottom: 2rem; }
+      .about-mf .about-img img { margin-left: 10px; }
 
+      .skill-mf .progress {
+        margin: .5rem 0 1.2rem 0;
+        border-radius: 0;
+        height: .7rem;
+      }
+      .skill-mf .progress .progress-bar {
+        height: .7rem;
+        background-color: #ffbd39;
+      }
 
-<style>
+      /* ===== TYPING ANIMATION ===== */
+      #typing-animation {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(20, end) infinite;
+      }
+      #typing-animation:before {
+        content: "";
+        top: 0; left: 0;
+        width: 0; height: 100%;
+        background-color: #ccc;
+        animation: typing-cursor 0.5s ease-in-out infinite;
+      }
+      @keyframes typing { from { width: 0; } to { width: 100%; } }
+      @keyframes typing-cursor { from { width: 5px; } to { width: 0; } }
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+      /* ===== PROJECT ZOOM ===== */
+      .zoom-effect { overflow: hidden; transition: transform 0.3s ease-out; }
+      .zoom-effect:hover { transform: scale(1.1); }
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+      /* ===== TECH TAGS ===== */
+      .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+      .tech-tag {
+        background: rgba(255, 189, 57, 0.15);
+        border: 1px solid #ffbd39;
+        color: #ffbd39;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        white-space: nowrap;
+      }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+      /* ===== SKILL CATEGORIES ===== */
+      .skill-category {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        height: 100%;
+      }
+      .skill-category h4 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #ffbd39;
+        margin-bottom: 14px;
+        border-bottom: 2px solid #ffbd392e;
+        padding-bottom: 8px;
+      }
+      .skill-category .tag {
+        display: inline-block;
+        background: #f4f4f4;
+        color: #555;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.78rem;
+        margin: 3px 2px;
+        border: 1px solid #e0e0e0;
+      }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+      /* ===== CERTIFICATIONS ===== */
+      .cert-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 24px 20px;
+        text-align: center;
+        box-shadow: 0 3px 18px rgba(0,0,0,0.09);
+        margin-bottom: 24px;
+        transition: transform .25s, box-shadow .25s;
+        height: 100%;
+      }
+      .cert-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.13); }
+      .cert-card .cert-icon {
+        width: 56px; height: 56px;
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 14px;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #fff;
+      }
+      .cert-card h5 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; color: #2d2d2d; }
+      .cert-card p { font-size: 0.78rem; color: #777; margin: 0; }
+      .icon-databricks { background: linear-gradient(135deg, #ff3621, #ff8c00); }
+      .icon-azure { background: linear-gradient(135deg, #0089d6, #0078d4); }
+      .icon-gcp { background: linear-gradient(135deg, #4285f4, #34a853); }
+      .icon-aws { background: linear-gradient(135deg, #ff9900, #e8961a); }
 
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
+      /* ===== EXPERIENCE TIMELINE ===== */
+      .timeline-badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
+      .badge-current { background: #d4edda; color: #155724; }
+    </style>
   </head>
+
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
+
+    <!-- ===== NAVBAR ===== -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Sateesh Kumar</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-				<div class="one-third js-fullheight order-md-last img" style="background-image: url(images/Myimage.avif); background-size: 85% auto; background-position: center;">
-					<div class="overlay"></div>
-				  </div>
-				  
-				
-           
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">HELLO!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Sateesh Kumar</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Data Engineer  ',
-						'Data Science  ',
-						'Power BI   ',
-						'Data Analytics    ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>A Senior Data Engineer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/sateesh-nunna" class="btn btn-primary py-3 px-4">LinkedIn</a>
-							<a href="https://github.com/Sateesh1209" class="btn btn-white btn-outline-white py-3 px-4">My Works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/Myimage.avif" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Sateesh Kumar</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Senior Data Engineer</span></p>
-										<p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>California, USA</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>SQL</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>With over 5 years of comprehensive experience in the field of data science & analytics, accompanied by a bachelor's degree in engineering. 
-									Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, &amp; machine learning. 
-									Demonstrated success in leading impactful projects and providing effective mentorship.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Engineer &amp; Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Data Engineering, Big Data Analytics, Digital Transformation &amp; Business Intelligence</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Master of Science in Computer Science</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Apache Spark, Hadoop, Netezza&amp; Apache Nifi
-									</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, SQL, Git, RESTful APIs, Google Analytics &amp; CI/CD Pipelines</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="15">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/sateesh-nunna/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Experienced Senior Data Analyst adept at leveraging data to inform strategic business decisions. With over 5+ years of hands-on experience, I specialize in data science, statistical analysis, and implementing machine learning algorithms. Skilled in project management, I excel at translating complex data into actionable insights that drive business growth.</p>
-          </div>
-        </div>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2023-Till date</span>
-						<h2>Senior Data Engineer</h2>
-						<span class="position">TEKhops</span>
-						<ul>
-							<li>Led successful full-cycle AEP implementations, ensuring seamless client onboarding and certification.</li>
-							<li>Leveraged Python for data manipulation, scripting, and automation, enhancing workflow efficiency.</li>
-							<li>Managed AWS resources for AEP deployment, ensuring scalability, security, and cost-effectiveness.</li>
-							<li>Spearheaded end-to-end data warehouse projects, optimizing performance and resource utilization with innovative approaches.</li>
-						</ul>
-					</div>
-					
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2019-2022</span>
-						<h2> Data Engineer</h2>
-						<span class="position">NTT Data</span>
-							<ul>
-								<li>Designed and maintained scalable data pipelines using Spark, Java/Scala, Hadoop, and Apache Nifi, ensuring seamless data processing and analysis.</li>
-								<li>Spearheaded the integration of new technologies and approaches for handling large datasets efficiently, while implementing RESTful APIs for system integration and enhancing platform interoperability.</li>
-								<li>Led the implementation of data engineering solutions and spearheaded digital transformation initiatives using Agile methodologies, while collaborating with stakeholders to align project objectives with business goals.</li>
-							</ul>
-					</div>
-
-				</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-2023</span>
-    					<h2>Master of Science</h2>
-    					<span class="position">Oklahoma Christian University, USA</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2015-2019</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">
-Sri Venkateswara College of Engineering Technology, India </span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-					<p><a href="https://drive.google.com/uc?export=download&id=1VfrA1lwJ8MMWSqmLsiBxBITPuCW8H3bp" class="btn btn-primary py-4 px-5" target="_blank">Download CV</a></p>
-				</div>
-				
-				
-    		</div>
-    	</div>
-    </section>
-
-   
-
-    <section class="ftco-section" id="project-section">
       <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
-          </div>
+        <a class="navbar-brand" href="index.html">Sateesh Kumar</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
+            <li class="nav-item"><a href="#certifications-section" class="nav-link"><span>Certifications</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+      </div>
+    </nav>
 
-                <h3 class="heading"><a href="#">Digital Music Store Data Analysis using SQL</a></h3>
-                <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p>
+    <!-- ===== HERO ===== -->
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+              <div class="one-third js-fullheight order-md-last img" style="background-image: url(images/Myimage.avif); background-size: 85% auto; background-position: center;">
+                <div class="overlay"></div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+              <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">HELLO!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Sateesh Kumar Nunna</span></h1>
 
-                <h3 class="heading"><a href="#">Data Analysis using Python Project for Beginners</a></h3>
-                <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+                  <span id="typing-animation"></span>
+                  <script>
+                    const typingAnimationElement = document.getElementById('typing-animation');
+                    const typingTexts = [
+                      'AI Data Engineer  ',
+                      'Azure Data Engineer  ',
+                      'AWS Data Engineer  ',
+                      'GCP Data Engineer  ',
+                    ];
+                    function playTypingAnimation(text) {
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => { typingAnimationElement.textContent += text[i]; }, i * 120);
+                      }
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 120 + 1000);
+                    }
+                    playTypingAnimation(typingTexts[0]);
+                  </script>
 
-                <h3 class="heading"><a href="#">Power BI Sales dashboard Project for Beginners</a></h3>
-                <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-	  </div>
-    </section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="6">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="15">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <!--<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>-->
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="267">0</strong>
-                <span>Cups of coffee</span>
+                  <br><br>
+                  <h2>Senior Data Engineer &mdash; 7+ Years</h2>
+                  <p>
+                    <a href="https://www.linkedin.com/in/sateesh-nunna" class="btn btn-primary py-3 px-4" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Sateesh1209" class="btn btn-white btn-outline-white py-3 px-4" target="_blank">GitHub</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/Sateesh1209" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+    </section>
 
+    <!-- ===== ABOUT ===== -->
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 col-lg-5 d-flex">
+              <div class="img-about img d-flex align-items-stretch">
+                <div class="overlay">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="images/Myimage.avif" class="img-fluid rounded b-shadow-a" alt="Sateesh Kumar Nunna">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">Name: </span> <span>Sateesh Kumar Nunna</span></p>
+                        <p><span class="title-s">Role: </span> <span>Senior Data Engineer</span></p>
+                        <p><span class="title-s">Experience: </span> <span>7+ Years</span></p>
+                        <p><span class="title-s">Location: </span> <span>Plano, TX, USA</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill-mf">
+                    <p class="title-s">Core Proficiencies</p>
+                    <span>Python / PySpark</span> <span class="pull-right">95%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>SQL &amp; Data Warehousing</span> <span class="pull-right">95%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Cloud Platforms (AWS / Azure / GCP)</span> <span class="pull-right">92%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Apache Spark &amp; Big Data</span> <span class="pull-right">90%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>ETL Pipelines &amp; Orchestration</span> <span class="pull-right">93%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>ML / AI Integration</span> <span class="pull-right">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+              <div class="row justify-content-start pb-3">
+                <div class="col-md-12 heading-section ftco-animate">
+                  <h1 class="big">About</h1>
+                  <h2 class="mb-4">About Me</h2>
+                  <p>Senior Data Engineer with extensive experience designing and implementing cloud-based data pipelines using Python, SQL, Snowflake, and Spark. Developed scalable ETL and real-time streaming workflows on AWS, GCP, and Azure to integrate diverse sources and support analytics and machine learning use cases.</p>
+                  <p>Collaborated closely with analysts, data scientists, and IT teams to deliver reliable, timely data solutions that drive business insights across financial services, banking, and enterprise sectors.</p>
+                  <ul class="about-info mt-4 px-md-0 px-2">
+                    <li class="d-flex"><span>Profile:</span> <span>Senior Data Engineer &amp; AI/ML Practitioner</span></li>
+                    <li class="d-flex"><span>Domain:</span> <span>Data Engineering, Big Data, Real-Time Streaming, Cloud Architecture, Business Intelligence</span></li>
+                    <li class="d-flex"><span>Education:</span> <span>Master of Science in Computer Science &mdash; Oklahoma Christian University</span></li>
+                    <li class="d-flex"><span>Cloud:</span> <span>AWS, Azure, GCP (Triple-cloud certified)</span></li>
+                    <li class="d-flex"><span>Languages:</span> <span>Python, Scala, Java, SQL</span></li>
+                    <li class="d-flex"><span>Email:</span> <span><a href="mailto:Sateesh195.n@gmail.com">Sateesh195.n@gmail.com</a></span></li>
+                    <li class="d-flex"><span>Phone:</span> <span><a href="tel:4054134413">+1 (405) 413-4413</a></span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                <div class="text">
+                  <p class="mb-2">
+                    <span class="number" data-number="7">0</span><span>+</span>
+                    <span>&nbsp; Years of Experience</span>
+                  </p>
+                  <p class="mb-2">
+                    <span class="number" data-number="5">0</span>
+                    <span>&nbsp; Industry Certifications</span>
+                  </p>
+                  <p class="mb-4">
+                    <span class="number" data-number="3">0</span>
+                    <span>&nbsp; Cloud Platforms</span>
+                  </p>
+                  <p>
+                    <a href="https://www.linkedin.com/in/sateesh-nunna/" class="btn btn-primary py-3 px-3" target="_blank">Connect on LinkedIn</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ===== SKILLS ===== -->
+    <section class="ftco-section" id="skills-section" style="background-color: #f8f9fa;">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">Technical Skills</h2>
+            <p>Comprehensive expertise across the modern data engineering stack — from ingestion to analytics.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="skill-category">
+              <h4>Cloud Platforms</h4>
+              <span class="tag">AWS EC2</span><span class="tag">AWS S3</span><span class="tag">AWS Glue</span>
+              <span class="tag">Redshift</span><span class="tag">Athena</span><span class="tag">Lambda</span>
+              <span class="tag">EMR</span><span class="tag">Kinesis</span><span class="tag">AWS DMS</span>
+              <span class="tag">Azure Data Factory</span><span class="tag">Databricks</span><span class="tag">Azure Synapse</span>
+              <span class="tag">Azure Data Lake</span><span class="tag">BigQuery</span><span class="tag">GCS</span>
+              <span class="tag">GCP Dataflow</span><span class="tag">Pub/Sub</span><span class="tag">Cloud Functions</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="skill-category">
+              <h4>Big Data &amp; Streaming</h4>
+              <span class="tag">Apache Spark</span><span class="tag">PySpark</span><span class="tag">Hadoop HDFS</span>
+              <span class="tag">Hive</span><span class="tag">Kafka</span><span class="tag">Spark Streaming</span>
+              <span class="tag">Apache Beam</span><span class="tag">Structured Streaming</span>
+              <span class="tag">HBase</span><span class="tag">Sqoop</span><span class="tag">Flume</span>
+              <span class="tag">Impala</span><span class="tag">YARN</span><span class="tag">ELK Stack</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="skill-category">
+              <h4>Data Warehousing</h4>
+              <span class="tag">Snowflake</span><span class="tag">Redshift</span><span class="tag">Teradata</span>
+              <span class="tag">Oracle</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span>
+              <span class="tag">SQL Server</span><span class="tag">MongoDB</span>
+              <span class="tag">Data Lakehouse</span><span class="tag">Dimensional Design</span>
+              <span class="tag">Data Modeling</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="skill-category">
+              <h4>Programming &amp; Scripting</h4>
+              <span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">Scala</span>
+              <span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Pandas</span>
+              <span class="tag">PowerShell</span><span class="tag">Shell Scripting</span>
+              <span class="tag">Boto3</span><span class="tag">JSON</span><span class="tag">HTML</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="skill-category">
+              <h4>ETL &amp; Orchestration</h4>
+              <span class="tag">Apache Airflow</span><span class="tag">Azure Data Factory</span>
+              <span class="tag">Talend</span><span class="tag">SSIS</span><span class="tag">Control-M</span>
+              <span class="tag">AWS Glue</span><span class="tag">AWS AppFlow</span>
+              <span class="tag">GCP Composer</span><span class="tag">DAG Authoring</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="skill-category">
+              <h4>DevOps, ML &amp; BI</h4>
+              <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Terraform</span>
+              <span class="tag">Jenkins</span><span class="tag">CI/CD</span><span class="tag">Git / GitHub</span>
+              <span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">Scikit-learn</span>
+              <span class="tag">MLflow</span><span class="tag">Power BI</span><span class="tag">Tableau</span>
+              <span class="tag">Looker</span><span class="tag">Prometheus</span><span class="tag">Grafana</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Work Experience</h2>
+            <p>7+ years engineering large-scale data pipelines across financial services, banking, and enterprise — spanning AWS, Azure, and GCP.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h1 class="big-4">Experience</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+
+        <!-- Job 1 -->
+        <div class="row">
+          <div class="col-md-12 ftco-animate">
+            <div class="resume-wrap">
+              <span class="date">Aug 2025 – Present</span>
+              <h2>AI Data Engineer
+                <span class="timeline-badge badge-current">Current</span>
+              </h2>
+              <span class="position">Bank of America (via Infosys) &mdash; Plano, TX, USA</span>
+              <ul>
+                <li>Designed and developed AI-driven data pipelines using Python and PySpark, implementing robust data modeling to enable large-scale processing of financial datasets for machine learning applications.</li>
+                <li>Built real-time data processing pipelines with Kafka and Spark Streaming, achieving sub-second latency for event-driven AI applications.</li>
+                <li>Developed feature engineering pipelines using PySpark, improving model accuracy for financial risk and loan processing use cases.</li>
+                <li>Implemented Python-based data validation pipelines using Pandas and Great Expectations, reducing data errors by 30%.</li>
+                <li>Collaborated with Data Scientists and ML Engineers to deploy AI models using Docker and CI/CD pipelines, increasing model inference speed by 25%.</li>
+                <li>Developed AI-powered analytics solutions with scikit-learn, TensorFlow, and MLflow, automating 15% of routine reporting tasks.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span><span class="tech-tag">PySpark</span><span class="tech-tag">Kafka</span>
+                <span class="tech-tag">Spark Streaming</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">MLflow</span>
+                <span class="tech-tag">Scikit-learn</span><span class="tech-tag">Hadoop HDFS</span><span class="tech-tag">Docker</span>
+                <span class="tech-tag">CI/CD</span><span class="tech-tag">Great Expectations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <!-- Job 2 -->
+        <div class="row">
+          <div class="col-md-12 ftco-animate">
+            <div class="resume-wrap">
+              <span class="date">Nov 2023 – Aug 2025</span>
+              <h2>Azure Data Engineer</h2>
+              <span class="position">Continental Resources &mdash; Oklahoma, USA</span>
+              <ul>
+                <li>Engineered and optimized ETL workflows using Azure Data Factory and Talend to integrate data across Azure Data Lake, Blob Storage, and SQL Database.</li>
+                <li>Built scalable pipelines with Azure Databricks, PySpark, and Spark Streaming for real-time analytics; implemented Kafka, Snowflake, and API integrations for modern data lakehouse architectures.</li>
+                <li>Automated cloud resource provisioning using Terraform; enhanced query performance on Azure Synapse Analytics and Snowflake via indexing, partitioning, and clustering.</li>
+                <li>Deployed CI/CD pipelines using Jenkins, Docker, and Kubernetes, reducing deployment time and increasing system reliability.</li>
+                <li>Managed Snowflake data warehouse with governance and security controls; conducted data migration between on-premises and cloud using Azure Data Factory and SSIS.</li>
+                <li>Strengthened security and compliance via Azure Active Directory, RBAC, and Multi-Factor Authentication; scheduled workflows with Control-M and Airflow.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Azure Data Factory</span><span class="tech-tag">Databricks</span><span class="tech-tag">PySpark</span>
+                <span class="tech-tag">Snowflake</span><span class="tech-tag">Azure Synapse</span><span class="tech-tag">Kafka</span>
+                <span class="tech-tag">Terraform</span><span class="tech-tag">Kubernetes</span><span class="tech-tag">Jenkins</span>
+                <span class="tech-tag">Control-M</span><span class="tech-tag">SSIS</span><span class="tech-tag">Tableau</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <!-- Job 3 -->
+        <div class="row">
+          <div class="col-md-12 ftco-animate">
+            <div class="resume-wrap">
+              <span class="date">Dec 2022 – Oct 2023</span>
+              <h2>AWS Data Engineer</h2>
+              <span class="position">BOK Financial Corporation &mdash; Tulsa, OK, USA</span>
+              <ul>
+                <li>Developed and optimized AWS Glue ETL pipelines and AWS AppFlow moving data between Amazon S3, Redshift, and Snowflake, improving data availability for downstream analytics.</li>
+                <li>Designed and deployed Python-based AWS Lambda functions to validate, cleanse, and transform streaming data, automating tasks and reducing manual effort.</li>
+                <li>Built and maintained Apache Spark applications with Scala and PySpark on EMR to process financial datasets at scale.</li>
+                <li>Engineered a Kafka event-driven architecture on AWS MSK to stream transactional data in real time; deployed containerized solutions with Kubernetes for high availability.</li>
+                <li>Automated AWS infrastructure provisioning using Terraform; implemented AWS IAM policies and RBAC for regulatory compliance.</li>
+                <li>Led data migration from Amazon Redshift to Snowflake; configured and monitored Control-M workflows for critical data jobs.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">AWS Glue</span><span class="tech-tag">S3</span><span class="tech-tag">Redshift</span>
+                <span class="tech-tag">Lambda</span><span class="tech-tag">EMR</span><span class="tech-tag">Snowflake</span>
+                <span class="tech-tag">Kafka (MSK)</span><span class="tech-tag">Spark / Scala</span><span class="tech-tag">Terraform</span>
+                <span class="tech-tag">Kubernetes</span><span class="tech-tag">AWS IAM</span><span class="tech-tag">SSIS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <!-- Job 4 -->
+        <div class="row">
+          <div class="col-md-12 ftco-animate">
+            <div class="resume-wrap">
+              <span class="date">Jun 2021 – Jul 2022</span>
+              <h2>Sr. GCP Data Engineer</h2>
+              <span class="position">Lloyds Banking Group &mdash; London, UK</span>
+              <ul>
+                <li>Designed and implemented data pipelines with Google Cloud Dataflow and Apache Beam, integrating Google Analytics 4 data for faster ingestion and transformation of large datasets.</li>
+                <li>Migrated Oracle databases to Google BigQuery, optimizing query performance and reducing latency for analytics workloads.</li>
+                <li>Automated ETL pipeline orchestration using GCP Cloud Composer (Airflow) workflows, reducing manual intervention and improving reliability.</li>
+                <li>Built real-time data streaming with Pub/Sub, Dataflow, and Apache Kafka; managed HBase NoSQL databases with PySpark for real-time processing.</li>
+                <li>Integrated Scikit-learn ML models into BigQuery ML to support fraud detection and risk analysis, enabling faster risk scoring.</li>
+                <li>Collaborated with cross-functional teams to modernize legacy ETL workflows, reducing processing times by 30%.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">BigQuery</span><span class="tech-tag">GCS</span><span class="tech-tag">Dataflow</span>
+                <span class="tech-tag">Apache Beam</span><span class="tech-tag">Pub/Sub</span><span class="tech-tag">Cloud Composer</span>
+                <span class="tech-tag">Cloud Functions</span><span class="tech-tag">HBase</span><span class="tech-tag">PySpark</span>
+                <span class="tech-tag">Scikit-learn</span><span class="tech-tag">Power BI</span><span class="tech-tag">Google Analytics 4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <!-- Job 5 -->
+        <div class="row">
+          <div class="col-md-12 ftco-animate">
+            <div class="resume-wrap">
+              <span class="date">Oct 2017 – Jul 2019</span>
+              <h2>Data Engineer</h2>
+              <span class="position">Teleperformance &mdash; Hyderabad, India</span>
+              <ul>
+                <li>Designed and optimized ETL/ELT pipelines integrating high-volume data from multiple sources into Azure Data Lake, Blob Storage, and SQL Data Warehouse.</li>
+                <li>Implemented real-time data streaming using Kafka and Spark Streaming; created Databricks Spark jobs with PySpark for large-scale data transformation and ML model training.</li>
+                <li>Automated data migration from on-premises databases to Azure Data Lake Store using Azure Data Factory; integrated Apache Airflow for DAG-based pipeline orchestration.</li>
+                <li>Implemented CI/CD pipelines with Jenkins and Git; engineered SSRS reports with drill-down and parameterized capabilities for actionable business insights.</li>
+                <li>Ensured data consistency across Teradata, Oracle, and Azure SQL environments through comprehensive quality checks.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Azure Data Factory</span><span class="tech-tag">Kafka</span><span class="tech-tag">Spark Streaming</span>
+                <span class="tech-tag">Databricks</span><span class="tech-tag">Apache Airflow</span><span class="tech-tag">Jenkins</span>
+                <span class="tech-tag">Kubernetes</span><span class="tech-tag">Docker</span><span class="tech-tag">Teradata</span>
+                <span class="tech-tag">SSRS</span><span class="tech-tag">Looker</span><span class="tech-tag">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br><br>
+
+        <!-- Education -->
+        <div class="row">
+          <h1 class="big-4">Education</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6 ftco-animate">
+            <div class="resume-wrap">
+              <span class="date">Aug 2022 – Sep 2023</span>
+              <h2>Master of Science &mdash; Computer Science</h2>
+              <span class="position">Oklahoma Christian University, USA</span>
+              <p class="mt-4">Graduate studies with focus on data systems, distributed computing, and applied machine learning.</p>
+            </div>
+          </div>
+          <div class="col-md-6 ftco-animate">
+            <div class="resume-wrap">
+              <span class="date">2015 – 2019</span>
+              <h2>Bachelor of Engineering</h2>
+              <span class="position">Sri Venkateswara College of Engineering Technology, India</span>
+              <p class="mt-4">Undergraduate degree in engineering with first class distinction.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p><a href="Resume/Sateesh-DE.pdf" class="btn btn-primary py-4 px-5" download>Download Resume</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="ftco-section" id="certifications-section" style="background-color: #f8f9fa;">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Certs</h1>
+            <h2 class="mb-4">Certifications</h2>
+            <p>Industry-recognized certifications validating expertise across all three major cloud platforms and the Databricks ecosystem.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4 col-xl-20p ftco-animate" style="--col-xl-w: 20%;">
+            <div class="cert-card">
+              <div class="cert-icon icon-databricks">DB</div>
+              <h5>Databricks Certified</h5>
+              <p>Generative AI Engineer Associate</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl ftco-animate">
+            <div class="cert-card">
+              <div class="cert-icon icon-databricks">DB</div>
+              <h5>Databricks Certified</h5>
+              <p>Data Engineer Associate</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl ftco-animate">
+            <div class="cert-card">
+              <div class="cert-icon icon-azure">Az</div>
+              <h5>Microsoft Certified</h5>
+              <p>Azure Data Fundamentals (DP-900)</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl ftco-animate">
+            <div class="cert-card">
+              <div class="cert-icon icon-gcp">GCP</div>
+              <h5>Google Cloud Certified</h5>
+              <p>Associate Cloud Engineer</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 col-xl ftco-animate">
+            <div class="cert-card">
+              <div class="cert-icon icon-aws">AWS</div>
+              <h5>AWS Certified</h5>
+              <p>Data Engineer &ndash; Associate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COUNTERS ===== -->
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+        <div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="7">0</strong>
+                <span>Years Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Certifications</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Cloud Platforms</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Companies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+        <div class="row justify-content-center">
+          <div class="col-md-7 ftco-animate text-center">
+            <h2>More projects on <span>GitHub</span></h2>
+            <div class="heading">
+              <h4>Building reliable data pipelines &amp; unlocking insights at scale</h4>
+              <br>
+              <p><a href="https://github.com/Sateesh1209" class="btn btn-primary py-3 px-5" target="_blank">GitHub Profile</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
+        <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+            <h2 class="mb-4">Get In Touch</h2>
+            <p>Open to senior data engineering and AI/ML data engineering opportunities. Feel free to reach out!</p>
           </div>
         </div>
 
         <div class="row d-flex contact-info mb-5">
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>California, USA</p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Location</h3>
+              <p>Plano, TX, USA</p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://4054134413">+1 405 413 4413</a></p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Phone</h3>
+              <p><a href="tel:4054134413">+1 (405) 413-4413</a></p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:sateeshnunna12@gmail.com">sateeshnunna12@gmail.com</a></p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email</h3>
+              <p><a href="mailto:Sateesh195.n@gmail.com">Sateesh195.n@gmail.com</a></p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/uc?export=download&id=1VfrA1lwJ8MMWSqmLsiBxBITPuCW8H3bp">Resume Link</a></p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">Resume</h3>
+              <p><a href="Resume/Sateesh-DE.pdf" download>Download PDF</a></p>
+            </div>
           </div>
+        </div>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/imeiW4wVxJi4BXC86" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="#"><span class="icon-youtube"></span></a></li> 
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sateesh-nunna/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li> 
-				      <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+        <div class="container">
+          <br>
+          <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+              <h2>Connect on <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/sateesh-nunna/" class="btn btn-primary py-3 px-5 ml-3" target="_blank">LinkedIn</a>
+              </h2>
+            </div>
+          </div>
+          <br>
+          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+            <li class="ftco-animate normal-txt">Find me on &nbsp;</li>
+            <li class="ftco-animate"><a href="https://www.linkedin.com/in/sateesh-nunna/" target="_blank"><span class="icon-linkedin"></span></a></li>
+            <li class="ftco-animate"><a href="https://github.com/Sateesh1209" target="_blank"><span class="icon-github"></span></a></li>
+          </ul>
+          <br>
+        </div>
+      </div>
+    </section>
 
-
- 
-	
+    <!-- ===== FOOTER ===== -->
     <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>
+              &copy; <script>document.write(new Date().getFullYear());</script> Sateesh Kumar Nunna &mdash; Senior Data Engineer.
+              Template by <a href="https://colorlib.com" target="_blank">Colorlib</a> (CC BY 3.0).
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+    <!-- Loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
