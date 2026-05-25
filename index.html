@@ -1,781 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Sateesh Kumar Nunna | Senior Data Engineer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Senior Data Engineer with expertise in AWS, Azure, GCP, Snowflake, Spark, and Python. Available for data engineering and AI/ML roles.">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sateesh Kumar Nunna — Senior AI Data Engineer. 7+ years across AWS, Azure, GCP, Snowflake, Spark, and Python.">
+  <title>Sateesh Kumar Nunna | AI Data Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#060c1b;--bg2:#0b1526;--bg3:#0e1a30;
+      --card:rgba(255,255,255,0.04);--glass:rgba(11,21,38,0.85);
+      --border:rgba(0,212,255,0.18);--border-s:rgba(255,255,255,0.07);
+      --cyan:#00d4ff;--purple:#8b5cf6;--green:#10b981;--amber:#f59e0b;
+      --text:#e2e8f0;--muted:#94a3b8;--dim:#64748b;
+      --grad:linear-gradient(135deg,#00d4ff 0%,#8b5cf6 100%);
+      --grad2:linear-gradient(135deg,#8b5cf6 0%,#00d4ff 100%);
+      --glow:0 0 40px rgba(0,212,255,0.18);
+      --r:16px;--r-sm:8px;
+      --ease:all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px}
+    .section{padding:96px 0}
+    .sec-label{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+    .sec-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,2.9rem);font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:14px}
+    .sec-sub{color:var(--muted);font-size:1rem;max-width:580px;margin:0 auto}
+    .sec-head{text-align:center;margin-bottom:60px}
+    .grad-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    /* fade-in */
+    .fi{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+    .fi.on{opacity:1;transform:none}
+    /* buttons */
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-size:.9rem;font-weight:600;cursor:pointer;transition:var(--ease);border:none}
+    .btn-p{background:var(--grad);color:#fff;box-shadow:0 4px 24px rgba(0,212,255,.28)}
+    .btn-p:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,212,255,.42)}
+    .btn-s{background:rgba(255,255,255,.05);border:1px solid var(--border-s);color:var(--text)}
+    .btn-s:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
+    .btn-g{background:transparent;border:1px solid rgba(255,255,255,.1);color:var(--muted)}
+    .btn-g:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    /* ── NAVBAR ── */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:20px 0;transition:var(--ease)}
+    #nav.sc{background:rgba(6,12,27,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-s);padding:13px 0;box-shadow:0 4px 30px rgba(0,0,0,.35)}
+    .nav-i{display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.35rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-ul{display:flex;gap:32px;align-items:center}
+    .nav-ul a{font-size:.88rem;font-weight:500;color:var(--muted);transition:var(--ease);position:relative}
+    .nav-ul a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--grad);transition:width .3s}
+    .nav-ul a:hover{color:var(--text)}
+    .nav-ul a:hover::after,.nav-ul a.act::after{width:100%}
+    .nav-ul a.act{color:var(--cyan)}
+    .nav-hire{padding:8px 20px!important;background:var(--grad)!important;border-radius:50px;color:#fff!important;box-shadow:0 0 20px rgba(0,212,255,.25)}
+    .nav-hire::after{display:none!important}
+    .nav-hire:hover{transform:translateY(-2px);box-shadow:0 4px 28px rgba(0,212,255,.4)!important}
+    .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .ham span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--ease)}
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    /* ── HERO ── */
+    #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+    #cv{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+    .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 15% 50%,rgba(0,212,255,.07) 0%,transparent 60%),radial-gradient(ellipse 55% 55% at 85% 55%,rgba(139,92,246,.09) 0%,transparent 60%);z-index:0}
+    .hero-c{position:relative;z-index:1;padding:130px 0 90px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.25);border-radius:50px;font-size:.78rem;font-weight:700;color:var(--cyan);letter-spacing:1px;margin-bottom:26px;animation:fdD .6s ease both}
+    .dot-live{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.85)}}
+    .hero-name{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.8rem,7vw,5.4rem);font-weight:900;line-height:1.08;margin-bottom:18px;animation:fdD .6s .1s ease both}
+    .hero-name span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-typed{display:flex;align-items:center;gap:10px;font-size:clamp(1.1rem,2.5vw,1.7rem);font-weight:500;color:var(--muted);margin-bottom:22px;animation:fdD .6s .2s ease both;min-height:2rem}
+    #tt{color:var(--cyan);font-weight:700}
+    .cur{display:inline-block;width:3px;height:1.2em;background:var(--cyan);margin-left:2px;vertical-align:text-bottom;animation:blink .75s step-end infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    .hero-desc{font-size:1.02rem;color:var(--muted);max-width:600px;margin-bottom:38px;animation:fdD .6s .3s ease both;line-height:1.85}
+    .hero-desc strong{color:var(--text);font-weight:600}
+    .hero-acts{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:60px;animation:fdD .6s .4s ease both}
+    .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:660px;animation:fdU .6s .5s ease both}
+    .hs{padding:18px 16px;background:var(--card);border:1px solid var(--border-s);border-radius:var(--r);text-align:center;backdrop-filter:blur(8px);transition:var(--ease)}
+    .hs:hover{border-color:var(--border);transform:translateY(-4px);box-shadow:var(--glow)}
+    .hs-n{font-family:'Space Grotesk',sans-serif;font-size:1.9rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.2}
+    .hs-l{font-size:.7rem;color:var(--dim);margin-top:3px;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+    .scroll-ind{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;color:var(--dim);font-size:.72rem;animation:fdU 1s 1.2s ease both}
+    .s-mouse{width:22px;height:36px;border:2px solid rgba(255,255,255,.18);border-radius:11px;display:flex;justify-content:center;padding-top:5px}
+    .s-dot{width:3px;height:7px;background:var(--cyan);border-radius:2px;animation:sca 2s ease-in-out infinite}
+    @keyframes sca{0%{transform:translateY(0);opacity:1}100%{transform:translateY(11px);opacity:0}}
+    @keyframes fdD{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:none}}
+    @keyframes fdU{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
-    <style>
-      /* ===== ABOUT ===== */
-      .about-mf .box-shadow-full { padding-top: 4rem; padding-bottom: 4rem; }
-      .about-mf .about-img { margin-bottom: 2rem; }
-      .about-mf .about-img img { margin-left: 10px; }
+    /* ── ABOUT ── */
+    #about{background:var(--bg2)}
+    #about::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad);opacity:.25}
+    #about{position:relative}
+    .ab-grid{display:grid;grid-template-columns:1fr 1.45fr;gap:64px;align-items:center}
+    .ab-img-w{position:relative}
+    .ab-img-w img{width:100%;border-radius:20px;display:block}
+    .ab-frame{position:absolute;inset:-8px;border-radius:24px;background:var(--grad);z-index:-1;opacity:.35}
+    .ab-dots{position:absolute;bottom:-18px;right:-18px;width:110px;height:110px;background-image:radial-gradient(var(--cyan) 1.5px,transparent 1.5px);background-size:15px 15px;opacity:.25;z-index:-1}
+    .ab-label{font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+    .ab-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800;line-height:1.25;margin-bottom:18px}
+    .ab-p{color:var(--muted);margin-bottom:12px;font-size:.97rem}
+    .ab-dets{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0}
+    .ab-det .lbl{font-size:.68rem;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:2px}
+    .ab-det .val{font-size:.88rem;color:var(--text);font-weight:500}
+    .ab-det .val a{color:var(--cyan);transition:var(--ease)}
+    .ab-det .val a:hover{text-decoration:underline}
+    .ab-acts{display:flex;gap:12px;flex-wrap:wrap}
 
-      .skill-mf .progress {
-        margin: .5rem 0 1.2rem 0;
-        border-radius: 0;
-        height: .7rem;
-      }
-      .skill-mf .progress .progress-bar {
-        height: .7rem;
-        background-color: #ffbd39;
-      }
+    /* ── TECH ── */
+    #tech{background:var(--bg)}
+    .tc-cats{display:grid;gap:36px}
+    .tc-ttl{font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .tc-ttl::after{content:'';flex:1;height:1px;background:var(--border-s)}
+    .tc-grid{display:flex;flex-wrap:wrap;gap:10px}
+    .tc{display:flex;align-items:center;gap:7px;padding:9px 16px;background:var(--card);border:1px solid var(--border-s);border-radius:9px;font-size:.82rem;font-weight:500;color:var(--text);transition:var(--ease);cursor:default}
+    .tc i{font-size:1.2rem}
+    .tc:hover{border-color:var(--border);background:rgba(0,212,255,.06);color:var(--cyan);transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,212,255,.1)}
 
-      /* ===== TYPING ANIMATION ===== */
-      #typing-animation {
-        position: relative;
-        font-size: 30px;
-        font-weight: bold;
-        color: rgb(255, 255, 255);
-        overflow: hidden;
-        white-space: nowrap;
-        animation: typing 3s steps(20, end) infinite;
-      }
-      #typing-animation:before {
-        content: "";
-        top: 0; left: 0;
-        width: 0; height: 100%;
-        background-color: #ccc;
-        animation: typing-cursor 0.5s ease-in-out infinite;
-      }
-      @keyframes typing { from { width: 0; } to { width: 100%; } }
-      @keyframes typing-cursor { from { width: 5px; } to { width: 0; } }
+    /* ── EXPERIENCE ── */
+    #exp{background:var(--bg2)}
+    .tl{position:relative;padding-left:30px}
+    .tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--cyan),var(--purple),transparent)}
+    .tl-item{position:relative;padding-bottom:44px}
+    .tl-item:last-child{padding-bottom:0}
+    .tl-dot{position:absolute;left:-37px;top:18px;width:14px;height:14px;border-radius:50%;border:2px solid var(--cyan);background:var(--bg);transition:var(--ease)}
+    .tl-item:hover .tl-dot{background:var(--cyan);box-shadow:0 0 14px rgba(0,212,255,.5)}
+    .tl-item:first-child .tl-dot{background:var(--cyan);box-shadow:0 0 14px rgba(0,212,255,.4)}
+    .tl-card{background:var(--card);border:1px solid var(--border-s);border-radius:var(--r);padding:26px 30px;transition:var(--ease)}
+    .tl-card:hover{border-color:var(--border);box-shadow:0 8px 40px rgba(0,0,0,.22);transform:translateX(4px)}
+    .tl-hd{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+    .tl-role{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:700}
+    .tl-date{font-size:.75rem;font-weight:700;padding:4px 12px;background:rgba(0,212,255,.12);color:var(--cyan);border-radius:20px;white-space:nowrap}
+    .tl-date.cur{background:rgba(16,185,129,.12);color:var(--green)}
+    .tl-co{font-size:.92rem;color:var(--cyan);font-weight:600;margin-bottom:2px}
+    .tl-loc{font-size:.78rem;color:var(--dim);margin-bottom:14px}
+    .tl-loc i{margin-right:4px}
+    .tl-ul li{font-size:.85rem;color:var(--muted);padding:4px 0 4px 15px;position:relative;line-height:1.65}
+    .tl-ul li::before{content:'';position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--cyan);opacity:.55}
+    .tl-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+    .tag{font-size:.7rem;font-weight:600;padding:3px 9px;border-radius:5px;background:rgba(255,255,255,.04);border:1px solid var(--border-s);color:var(--muted);transition:var(--ease)}
+    .tag:hover{border-color:var(--border);color:var(--cyan)}
 
-      /* ===== PROJECT ZOOM ===== */
-      .zoom-effect { overflow: hidden; transition: transform 0.3s ease-out; }
-      .zoom-effect:hover { transform: scale(1.1); }
+    /* ── CERTS ── */
+    #certs{background:var(--bg)}
+    .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
+    .cert{padding:30px 22px;background:var(--card);border:1px solid var(--border-s);border-radius:var(--r);text-align:center;transition:var(--ease);position:relative;overflow:hidden}
+    .cert::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .3s}
+    .cert:hover{transform:translateY(-8px);border-color:transparent;box-shadow:0 16px 48px rgba(0,0,0,.3)}
+    .cert:hover::before{opacity:.06}
+    .cert-ico{width:60px;height:60px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:.95rem;font-weight:900;color:#fff;letter-spacing:-.5px}
+    .ic-db{background:linear-gradient(135deg,#ff3621,#ff8c00)}
+    .ic-az{background:linear-gradient(135deg,#0072c6,#0089d6)}
+    .ic-gcp{background:linear-gradient(135deg,#4285f4,#34a853)}
+    .ic-aws{background:linear-gradient(135deg,#ff9900,#e68a00)}
+    .cert-prov{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:7px}
+    .cert-name{font-family:'Space Grotesk',sans-serif;font-size:.9rem;font-weight:700;color:var(--text);line-height:1.4}
 
-      /* ===== TECH TAGS ===== */
-      .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-      .tech-tag {
-        background: rgba(255, 189, 57, 0.15);
-        border: 1px solid #ffbd39;
-        color: #ffbd39;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        font-weight: 500;
-        white-space: nowrap;
-      }
+    /* ── RESUME ── */
+    #resume-sec{background:var(--bg2)}
+    .res-wrap{max-width:880px;margin:0 auto}
+    .res-acts{display:flex;gap:12px;justify-content:center;margin-bottom:28px;flex-wrap:wrap}
+    .res-embed{border-radius:var(--r);overflow:hidden;border:1px solid var(--border);box-shadow:0 24px 80px rgba(0,0,0,.45)}
+    .res-embed iframe{width:100%;height:780px;display:block;border:none;background:#1a1a2e}
 
-      /* ===== SKILL CATEGORIES ===== */
-      .skill-category {
-        background: #fff;
-        border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-        height: 100%;
-      }
-      .skill-category h4 {
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #ffbd39;
-        margin-bottom: 14px;
-        border-bottom: 2px solid #ffbd392e;
-        padding-bottom: 8px;
-      }
-      .skill-category .tag {
-        display: inline-block;
-        background: #f4f4f4;
-        color: #555;
-        padding: 4px 10px;
-        border-radius: 4px;
-        font-size: 0.78rem;
-        margin: 3px 2px;
-        border: 1px solid #e0e0e0;
-      }
+    /* ── CONTACT ── */
+    #contact{background:var(--bg)}
+    .ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .ct-h3{font-family:'Space Grotesk',sans-serif;font-size:1.75rem;font-weight:800;margin-bottom:14px}
+    .ct-p{color:var(--muted);font-size:.95rem;margin-bottom:32px;line-height:1.8}
+    .ct-row{display:flex;align-items:center;gap:15px;padding:14px 0;border-bottom:1px solid var(--border-s)}
+    .ct-row:last-of-type{border-bottom:none}
+    .ct-ico{width:42px;height:42px;border-radius:10px;background:rgba(0,212,255,.1);display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:.95rem;flex-shrink:0}
+    .ct-row .lbl{font-size:.68rem;color:var(--dim);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:2px}
+    .ct-row .val{font-size:.88rem;color:var(--text);font-weight:500}
+    .ct-row .val a{transition:var(--ease)}
+    .ct-row .val a:hover{color:var(--cyan)}
+    .soc-links{display:flex;gap:10px;margin-top:28px}
+    .soc-btn{width:46px;height:46px;border-radius:11px;border:1px solid var(--border-s);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1rem;transition:var(--ease)}
+    .soc-btn:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,212,255,.08);transform:translateY(-3px)}
+    .avail-card{background:var(--card);border:1px solid var(--border-s);border-radius:var(--r);padding:34px;text-align:center}
+    .avail-badge{display:inline-flex;align-items:center;gap:7px;padding:7px 18px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.28);border-radius:50px;color:var(--green);font-size:.8rem;font-weight:700;margin-bottom:22px}
+    .avail-h3{font-family:'Space Grotesk',sans-serif;font-size:1.45rem;font-weight:800;margin-bottom:12px}
+    .avail-p{color:var(--muted);font-size:.88rem;margin-bottom:26px;line-height:1.75}
+    .cta-stk{display:flex;flex-direction:column;gap:10px}
+    .cta-stk .btn{justify-content:center}
 
-      /* ===== CERTIFICATIONS ===== */
-      .cert-card {
-        background: #fff;
-        border-radius: 10px;
-        padding: 24px 20px;
-        text-align: center;
-        box-shadow: 0 3px 18px rgba(0,0,0,0.09);
-        margin-bottom: 24px;
-        transition: transform .25s, box-shadow .25s;
-        height: 100%;
-      }
-      .cert-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.13); }
-      .cert-card .cert-icon {
-        width: 56px; height: 56px;
-        border-radius: 50%;
-        display: flex; align-items: center; justify-content: center;
-        margin: 0 auto 14px;
-        font-size: 1.5rem;
-        font-weight: 800;
-        color: #fff;
-      }
-      .cert-card h5 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; color: #2d2d2d; }
-      .cert-card p { font-size: 0.78rem; color: #777; margin: 0; }
-      .icon-databricks { background: linear-gradient(135deg, #ff3621, #ff8c00); }
-      .icon-azure { background: linear-gradient(135deg, #0089d6, #0078d4); }
-      .icon-gcp { background: linear-gradient(135deg, #4285f4, #34a853); }
-      .icon-aws { background: linear-gradient(135deg, #ff9900, #e8961a); }
+    /* ── FOOTER ── */
+    footer{background:var(--bg2);border-top:1px solid var(--border-s);padding:28px 0;text-align:center;color:var(--dim);font-size:.82rem}
+    footer a{color:var(--cyan);transition:var(--ease)}
+    footer a:hover{text-decoration:underline}
 
-      /* ===== EXPERIENCE TIMELINE ===== */
-      .timeline-badge {
-        display: inline-block;
-        padding: 3px 10px;
-        border-radius: 12px;
-        font-size: 0.72rem;
-        font-weight: 600;
-        margin-left: 8px;
-        vertical-align: middle;
-      }
-      .badge-current { background: #d4edda; color: #155724; }
-    </style>
-  </head>
+    /* ── FLOATING BAR ── */
+    .fl-bar{position:fixed;left:20px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:100}
+    .fl-bar a{width:38px;height:38px;border-radius:9px;background:var(--glass);border:1px solid var(--border-s);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:.95rem;transition:var(--ease)}
+    .fl-bar a:hover{color:var(--cyan);border-color:var(--border);transform:translateX(4px)}
+    .fl-bar::after{content:'';display:block;width:1px;height:56px;background:linear-gradient(to bottom,var(--border-s),transparent);margin:4px auto 0}
 
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    /* ── BACK TO TOP ── */
+    #btt{position:fixed;bottom:28px;right:28px;width:42px;height:42px;border-radius:11px;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;cursor:pointer;opacity:0;visibility:hidden;transition:var(--ease);box-shadow:0 4px 20px rgba(0,212,255,.3);z-index:100;border:none}
+    #btt.on{opacity:1;visibility:visible}
+    #btt:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,212,255,.45)}
 
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Sateesh Kumar</a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav nav ml-auto">
-            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-            <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
-            <li class="nav-item"><a href="#certifications-section" class="nav-link"><span>Certifications</span></a></li>
-            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px){
+      .ab-grid{grid-template-columns:1fr;gap:38px}
+      .ab-img-w{max-width:320px;margin:0 auto}
+      .ct-grid{grid-template-columns:1fr;gap:38px}
+      .hero-stats{grid-template-columns:repeat(2,1fr)}
+      .fl-bar{display:none}
+    }
+    @media(max-width:768px){
+      .section{padding:68px 0}
+      .nav-ul{display:none;position:fixed;inset:0;background:rgba(6,12,27,.98);flex-direction:column;align-items:center;justify-content:center;gap:28px;font-size:1.15rem;z-index:998}
+      .nav-ul.open{display:flex}
+      .nav-ul a::after{display:none}
+      .ham{display:flex;z-index:999}
+      .certs-grid{grid-template-columns:repeat(2,1fr)}
+      .res-embed iframe{height:480px}
+    }
+    @media(max-width:480px){
+      .hero-stats{gap:10px}
+      .hero-acts{flex-direction:column}
+      .btn{justify-content:center}
+      .ab-dets{grid-template-columns:1fr}
+      .certs-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating social bar -->
+<div class="fl-bar">
+  <a href="https://www.linkedin.com/in/sateesh-kumar-7445aa31a/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://github.com/Sateesh1209" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="mailto:Sateesh195.n@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+</div>
+
+<!-- Back to top -->
+<button id="btt" onclick="scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-i">
+      <a href="#hero" class="nav-logo">SK Nunna</a>
+      <ul class="nav-ul" id="nu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#tech">Skills</a></li>
+        <li><a href="#exp">Experience</a></li>
+        <li><a href="#certs">Certs</a></li>
+        <li><a href="#resume-sec">Resume</a></li>
+        <li><a href="#contact" class="nav-hire">Hire Me</a></li>
+      </ul>
+      <div class="ham" id="ham"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <canvas id="cv"></canvas>
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-c">
+      <div class="hero-badge"><span class="dot-live"></span>Open to Senior Data Engineering Roles</div>
+      <h1 class="hero-name">Sateesh Kumar<br><span>Nunna</span></h1>
+      <div class="hero-typed"><span id="tt"></span><span class="cur"></span></div>
+      <p class="hero-desc">Senior Data Engineer with <strong>7+ years</strong> designing scalable cloud-based data pipelines, real-time streaming systems, and AI/ML workflows across <strong>AWS</strong>, <strong>Azure</strong>, and <strong>GCP</strong>. Certified on all three major cloud platforms.</p>
+      <div class="hero-acts">
+        <a href="https://www.linkedin.com/in/sateesh-kumar-7445aa31a/" target="_blank" class="btn btn-p"><i class="fab fa-linkedin-in"></i> LinkedIn Profile</a>
+        <a href="Resume/Sateesh-DE.pdf" download class="btn btn-s"><i class="fas fa-download"></i> Download Resume</a>
+        <a href="#contact" class="btn btn-g"><i class="fas fa-envelope"></i> Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hs"><div class="hs-n"><span class="cnt" data-t="7">0</span>+</div><div class="hs-l">Years Exp.</div></div>
+        <div class="hs"><div class="hs-n"><span class="cnt" data-t="5">0</span></div><div class="hs-l">Certs</div></div>
+        <div class="hs"><div class="hs-n"><span class="cnt" data-t="3">0</span></div><div class="hs-l">Cloud Platforms</div></div>
+        <div class="hs"><div class="hs-n"><span class="cnt" data-t="5">0</span></div><div class="hs-l">Companies</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-ind"><div class="s-mouse"><div class="s-dot"></div></div><span>scroll</span></div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="ab-grid">
+      <div class="ab-img-w fi">
+        <div class="ab-frame"></div>
+        <img src="images/Myimage.avif" alt="Sateesh Kumar Nunna">
+        <div class="ab-dots"></div>
+      </div>
+      <div class="fi">
+        <div class="ab-label">About Me</div>
+        <h2 class="ab-title">Building the Future of <span class="grad-text">Data Infrastructure</span></h2>
+        <p class="ab-p">Senior Data Engineer specialising in enterprise-scale data pipelines using Python, SQL, Snowflake, and Apache Spark. Deep experience integrating AI/ML workflows into production data systems across the financial services sector.</p>
+        <p class="ab-p">Delivered measurable outcomes: <strong>30% reduction in data errors</strong>, <strong>25% faster model inference</strong>, and <strong>sub-second latency</strong> for event-driven pipelines. Triple-cloud certified — a rare combination that lets me architect solutions across any cloud environment.</p>
+        <div class="ab-dets">
+          <div class="ab-det"><span class="lbl">Role</span><span class="val">AI Data Engineer</span></div>
+          <div class="ab-det"><span class="lbl">Current</span><span class="val">Bank of America (Infosys)</span></div>
+          <div class="ab-det"><span class="lbl">Location</span><span class="val">Plano, TX, USA</span></div>
+          <div class="ab-det"><span class="lbl">Education</span><span class="val">M.S. Computer Science</span></div>
+          <div class="ab-det"><span class="lbl">Email</span><span class="val"><a href="mailto:Sateesh195.n@gmail.com">Sateesh195.n@gmail.com</a></span></div>
+          <div class="ab-det"><span class="lbl">LinkedIn</span><span class="val"><a href="https://www.linkedin.com/in/sateesh-kumar-7445aa31a/" target="_blank">View Profile →</a></span></div>
+        </div>
+        <div class="ab-acts">
+          <a href="https://www.linkedin.com/in/sateesh-kumar-7445aa31a/" target="_blank" class="btn btn-p"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          <a href="https://github.com/Sateesh1209" target="_blank" class="btn btn-s"><i class="fab fa-github"></i> GitHub</a>
+          <a href="Resume/Sateesh-DE.pdf" download class="btn btn-g"><i class="fas fa-file-pdf"></i> Resume PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TECH STACK ═══ -->
+<section id="tech" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">Technical Arsenal</div>
+      <h2 class="sec-title">Tech Stack</h2>
+      <p class="sec-sub">Comprehensive expertise across the modern data engineering stack — from batch ingestion to real-time AI.</p>
+    </div>
+    <div class="tc-cats fi">
+      <div>
+        <div class="tc-ttl">Cloud Platforms</div>
+        <div class="tc-grid">
+          <div class="tc"><i class="devicon-amazonwebservices-plain colored"></i>AWS</div>
+          <div class="tc"><i class="devicon-azure-plain colored"></i>Azure</div>
+          <div class="tc"><i class="devicon-googlecloud-plain colored"></i>GCP</div>
+          <div class="tc"><i class="fas fa-database" style="color:#29B5E8"></i>Snowflake</div>
+          <div class="tc"><i class="fas fa-layer-group" style="color:#FF9900"></i>AWS Glue</div>
+          <div class="tc"><i class="fas fa-server" style="color:#FF9900"></i>EMR</div>
+          <div class="tc"><i class="fas fa-warehouse" style="color:#FF9900"></i>Redshift</div>
+          <div class="tc"><i class="fas fa-bolt" style="color:#FF9900"></i>Lambda</div>
+          <div class="tc"><i class="fas fa-cogs" style="color:#0078d4"></i>Azure Data Factory</div>
+          <div class="tc"><i class="fas fa-database" style="color:#0078d4"></i>Azure Synapse</div>
+          <div class="tc"><i class="fas fa-mountain" style="color:#0078d4"></i>Databricks</div>
+          <div class="tc"><i class="fas fa-search" style="color:#4285f4"></i>BigQuery</div>
+          <div class="tc"><i class="fas fa-bolt" style="color:#4285f4"></i>Dataflow</div>
+          <div class="tc"><i class="fas fa-broadcast-tower" style="color:#4285f4"></i>Pub/Sub</div>
+        </div>
+      </div>
+      <div>
+        <div class="tc-ttl">Big Data &amp; Streaming</div>
+        <div class="tc-grid">
+          <div class="tc"><i class="devicon-apachespark-plain colored"></i>Apache Spark</div>
+          <div class="tc"><i class="devicon-hadoop-plain colored"></i>Hadoop HDFS</div>
+          <div class="tc"><i class="fas fa-exchange-alt" style="color:#231F20"></i>Apache Kafka</div>
+          <div class="tc"><i class="fas fa-stream" style="color:#E25A1C"></i>Spark Streaming</div>
+          <div class="tc"><i class="fas fa-project-diagram" style="color:#2196F3"></i>Apache Beam</div>
+          <div class="tc"><i class="fas fa-table" style="color:#fdee21"></i>Apache Hive</div>
+          <div class="tc"><i class="fas fa-database" style="color:#FF7B00"></i>HBase</div>
+          <div class="tc"><i class="fas fa-search-plus" style="color:#005571"></i>ELK Stack</div>
+          <div class="tc"><i class="fas fa-tachometer-alt" style="color:#94a3b8"></i>Impala</div>
+        </div>
+      </div>
+      <div>
+        <div class="tc-ttl">Programming &amp; Frameworks</div>
+        <div class="tc-grid">
+          <div class="tc"><i class="devicon-python-plain colored"></i>Python</div>
+          <div class="tc"><i class="devicon-scala-plain colored"></i>Scala</div>
+          <div class="tc"><i class="devicon-java-plain colored"></i>Java</div>
+          <div class="tc"><i class="fas fa-database" style="color:#4479A1"></i>SQL</div>
+          <div class="tc"><i class="devicon-pandas-plain colored"></i>Pandas</div>
+          <div class="tc"><i class="fas fa-code" style="color:#FF9900"></i>Boto3</div>
+          <div class="tc"><i class="fas fa-terminal" style="color:#89e051"></i>Shell / PowerShell</div>
+        </div>
+      </div>
+      <div>
+        <div class="tc-ttl">ETL, Orchestration &amp; DevOps</div>
+        <div class="tc-grid">
+          <div class="tc"><i class="devicon-apacheairflow-plain colored"></i>Apache Airflow</div>
+          <div class="tc"><i class="devicon-terraform-plain colored"></i>Terraform</div>
+          <div class="tc"><i class="devicon-docker-plain colored"></i>Docker</div>
+          <div class="tc"><i class="devicon-kubernetes-plain colored"></i>Kubernetes</div>
+          <div class="tc"><i class="devicon-jenkins-plain colored"></i>Jenkins</div>
+          <div class="tc"><i class="devicon-git-plain colored"></i>Git / GitHub</div>
+          <div class="tc"><i class="fas fa-cogs" style="color:#e4a82b"></i>Control-M</div>
+          <div class="tc"><i class="fas fa-sync" style="color:#FF6D00"></i>Talend</div>
+          <div class="tc"><i class="fas fa-database" style="color:#CC2927"></i>SSIS</div>
+        </div>
+      </div>
+      <div>
+        <div class="tc-ttl">ML / AI &amp; Analytics</div>
+        <div class="tc-grid">
+          <div class="tc"><i class="devicon-tensorflow-original colored"></i>TensorFlow</div>
+          <div class="tc"><i class="devicon-pytorch-plain colored"></i>PyTorch</div>
+          <div class="tc"><i class="fas fa-robot" style="color:#F7931E"></i>Scikit-learn</div>
+          <div class="tc"><i class="fas fa-chart-bar" style="color:#FF3621"></i>MLflow</div>
+          <div class="tc"><i class="fas fa-chart-pie" style="color:#F2C811"></i>Power BI</div>
+          <div class="tc"><i class="fas fa-chart-line" style="color:#E97627"></i>Tableau</div>
+          <div class="tc"><i class="fas fa-eye" style="color:#4285F4"></i>Looker</div>
+          <div class="tc"><i class="fas fa-check-circle" style="color:#10b981"></i>Great Expectations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section id="exp" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">Work History</div>
+      <h2 class="sec-title">Experience</h2>
+      <p class="sec-sub">7+ years of progressive data engineering at global financial institutions — building mission-critical pipelines at scale.</p>
+    </div>
+    <div class="tl">
+
+      <div class="tl-item fi">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-hd">
+            <div class="tl-role">AI Data Engineer</div>
+            <div class="tl-date cur">Aug 2025 – Present</div>
+          </div>
+          <div class="tl-co">Bank of America (via Infosys)</div>
+          <div class="tl-loc"><i class="fas fa-map-marker-alt"></i>Plano, TX, USA</div>
+          <ul class="tl-ul">
+            <li>Designed AI-driven data pipelines with Python &amp; PySpark for large-scale financial dataset processing, enabling ML applications at enterprise scale.</li>
+            <li>Built real-time Kafka + Spark Streaming pipelines achieving <strong>sub-second latency</strong> for event-driven AI applications.</li>
+            <li>Developed data validation pipelines using Pandas + Great Expectations — reduced data errors by <strong>30%</strong>.</li>
+            <li>Deployed AI models via Docker &amp; CI/CD, increasing model inference speed by <strong>25%</strong>; automated 15% of routine reporting tasks with scikit-learn &amp; MLflow.</li>
           </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- ===== HERO ===== -->
-    <section id="home-section" class="hero">
-      <div class="home-slider owl-carousel">
-        <div class="slider-item">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-              <div class="one-third js-fullheight order-md-last img" style="background-image: url(images/Myimage.avif); background-size: 85% auto; background-position: center;">
-                <div class="overlay"></div>
-              </div>
-              <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-                <div class="text">
-                  <span class="subheading">HELLO!</span>
-                  <h1 class="mb-4 mt-3">I'm <span>Sateesh Kumar Nunna</span></h1>
-
-                  <span id="typing-animation"></span>
-                  <script>
-                    const typingAnimationElement = document.getElementById('typing-animation');
-                    const typingTexts = [
-                      'AI Data Engineer  ',
-                      'Azure Data Engineer  ',
-                      'AWS Data Engineer  ',
-                      'GCP Data Engineer  ',
-                    ];
-                    function playTypingAnimation(text) {
-                      for (let i = 0; i < text.length; i++) {
-                        setTimeout(() => { typingAnimationElement.textContent += text[i]; }, i * 120);
-                      }
-                      setTimeout(() => {
-                        typingAnimationElement.textContent = '';
-                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                      }, text.length * 120 + 1000);
-                    }
-                    playTypingAnimation(typingTexts[0]);
-                  </script>
-
-                  <br><br>
-                  <h2>Senior Data Engineer &mdash; 7+ Years</h2>
-                  <p>
-                    <a href="https://www.linkedin.com/in/sateesh-nunna" class="btn btn-primary py-3 px-4" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/Sateesh1209" class="btn btn-white btn-outline-white py-3 px-4" target="_blank">GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-      <div class="container">
-        <div class="row">
-          <div class="row d-flex align-items-stretch">
-            <div class="col-md-6 col-lg-5 d-flex">
-              <div class="img-about img d-flex align-items-stretch">
-                <div class="overlay">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="images/Myimage.avif" class="img-fluid rounded b-shadow-a" alt="Sateesh Kumar Nunna">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Sateesh Kumar Nunna</span></p>
-                        <p><span class="title-s">Role: </span> <span>Senior Data Engineer</span></p>
-                        <p><span class="title-s">Experience: </span> <span>7+ Years</span></p>
-                        <p><span class="title-s">Location: </span> <span>Plano, TX, USA</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Core Proficiencies</p>
-                    <span>Python / PySpark</span> <span class="pull-right">95%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>SQL &amp; Data Warehousing</span> <span class="pull-right">95%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>Cloud Platforms (AWS / Azure / GCP)</span> <span class="pull-right">92%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>Apache Spark &amp; Big Data</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>ETL Pipelines &amp; Orchestration</span> <span class="pull-right">93%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>ML / AI Integration</span> <span class="pull-right">80%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-              <div class="row justify-content-start pb-3">
-                <div class="col-md-12 heading-section ftco-animate">
-                  <h1 class="big">About</h1>
-                  <h2 class="mb-4">About Me</h2>
-                  <p>Senior Data Engineer with extensive experience designing and implementing cloud-based data pipelines using Python, SQL, Snowflake, and Spark. Developed scalable ETL and real-time streaming workflows on AWS, GCP, and Azure to integrate diverse sources and support analytics and machine learning use cases.</p>
-                  <p>Collaborated closely with analysts, data scientists, and IT teams to deliver reliable, timely data solutions that drive business insights across financial services, banking, and enterprise sectors.</p>
-                  <ul class="about-info mt-4 px-md-0 px-2">
-                    <li class="d-flex"><span>Profile:</span> <span>Senior Data Engineer &amp; AI/ML Practitioner</span></li>
-                    <li class="d-flex"><span>Domain:</span> <span>Data Engineering, Big Data, Real-Time Streaming, Cloud Architecture, Business Intelligence</span></li>
-                    <li class="d-flex"><span>Education:</span> <span>Master of Science in Computer Science &mdash; Oklahoma Christian University</span></li>
-                    <li class="d-flex"><span>Cloud:</span> <span>AWS, Azure, GCP (Triple-cloud certified)</span></li>
-                    <li class="d-flex"><span>Languages:</span> <span>Python, Scala, Java, SQL</span></li>
-                    <li class="d-flex"><span>Email:</span> <span><a href="mailto:Sateesh195.n@gmail.com">Sateesh195.n@gmail.com</a></span></li>
-                    <li class="d-flex"><span>Phone:</span> <span><a href="tel:4054134413">+1 (405) 413-4413</a></span></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="counter-wrap ftco-animate d-flex mt-md-3">
-                <div class="text">
-                  <p class="mb-2">
-                    <span class="number" data-number="7">0</span><span>+</span>
-                    <span>&nbsp; Years of Experience</span>
-                  </p>
-                  <p class="mb-2">
-                    <span class="number" data-number="5">0</span>
-                    <span>&nbsp; Industry Certifications</span>
-                  </p>
-                  <p class="mb-4">
-                    <span class="number" data-number="3">0</span>
-                    <span>&nbsp; Cloud Platforms</span>
-                  </p>
-                  <p>
-                    <a href="https://www.linkedin.com/in/sateesh-nunna/" class="btn btn-primary py-3 px-3" target="_blank">Connect on LinkedIn</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SKILLS ===== -->
-    <section class="ftco-section" id="skills-section" style="background-color: #f8f9fa;">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Skills</h1>
-            <h2 class="mb-4">Technical Skills</h2>
-            <p>Comprehensive expertise across the modern data engineering stack — from ingestion to analytics.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="skill-category">
-              <h4>Cloud Platforms</h4>
-              <span class="tag">AWS EC2</span><span class="tag">AWS S3</span><span class="tag">AWS Glue</span>
-              <span class="tag">Redshift</span><span class="tag">Athena</span><span class="tag">Lambda</span>
-              <span class="tag">EMR</span><span class="tag">Kinesis</span><span class="tag">AWS DMS</span>
-              <span class="tag">Azure Data Factory</span><span class="tag">Databricks</span><span class="tag">Azure Synapse</span>
-              <span class="tag">Azure Data Lake</span><span class="tag">BigQuery</span><span class="tag">GCS</span>
-              <span class="tag">GCP Dataflow</span><span class="tag">Pub/Sub</span><span class="tag">Cloud Functions</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="skill-category">
-              <h4>Big Data &amp; Streaming</h4>
-              <span class="tag">Apache Spark</span><span class="tag">PySpark</span><span class="tag">Hadoop HDFS</span>
-              <span class="tag">Hive</span><span class="tag">Kafka</span><span class="tag">Spark Streaming</span>
-              <span class="tag">Apache Beam</span><span class="tag">Structured Streaming</span>
-              <span class="tag">HBase</span><span class="tag">Sqoop</span><span class="tag">Flume</span>
-              <span class="tag">Impala</span><span class="tag">YARN</span><span class="tag">ELK Stack</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="skill-category">
-              <h4>Data Warehousing</h4>
-              <span class="tag">Snowflake</span><span class="tag">Redshift</span><span class="tag">Teradata</span>
-              <span class="tag">Oracle</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span>
-              <span class="tag">SQL Server</span><span class="tag">MongoDB</span>
-              <span class="tag">Data Lakehouse</span><span class="tag">Dimensional Design</span>
-              <span class="tag">Data Modeling</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="skill-category">
-              <h4>Programming &amp; Scripting</h4>
-              <span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">Scala</span>
-              <span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Pandas</span>
-              <span class="tag">PowerShell</span><span class="tag">Shell Scripting</span>
-              <span class="tag">Boto3</span><span class="tag">JSON</span><span class="tag">HTML</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="skill-category">
-              <h4>ETL &amp; Orchestration</h4>
-              <span class="tag">Apache Airflow</span><span class="tag">Azure Data Factory</span>
-              <span class="tag">Talend</span><span class="tag">SSIS</span><span class="tag">Control-M</span>
-              <span class="tag">AWS Glue</span><span class="tag">AWS AppFlow</span>
-              <span class="tag">GCP Composer</span><span class="tag">DAG Authoring</span>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="skill-category">
-              <h4>DevOps, ML &amp; BI</h4>
-              <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Terraform</span>
-              <span class="tag">Jenkins</span><span class="tag">CI/CD</span><span class="tag">Git / GitHub</span>
-              <span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">Scikit-learn</span>
-              <span class="tag">MLflow</span><span class="tag">Power BI</span><span class="tag">Tableau</span>
-              <span class="tag">Looker</span><span class="tag">Prometheus</span><span class="tag">Grafana</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EXPERIENCE ===== -->
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Work Experience</h2>
-            <p>7+ years engineering large-scale data pipelines across financial services, banking, and enterprise — spanning AWS, Azure, and GCP.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <h1 class="big-4">Experience</h1>
-          <div class="underline"></div>
-        </div>
-        <br>
-
-        <!-- Job 1 -->
-        <div class="row">
-          <div class="col-md-12 ftco-animate">
-            <div class="resume-wrap">
-              <span class="date">Aug 2025 – Present</span>
-              <h2>AI Data Engineer
-                <span class="timeline-badge badge-current">Current</span>
-              </h2>
-              <span class="position">Bank of America (via Infosys) &mdash; Plano, TX, USA</span>
-              <ul>
-                <li>Designed and developed AI-driven data pipelines using Python and PySpark, implementing robust data modeling to enable large-scale processing of financial datasets for machine learning applications.</li>
-                <li>Built real-time data processing pipelines with Kafka and Spark Streaming, achieving sub-second latency for event-driven AI applications.</li>
-                <li>Developed feature engineering pipelines using PySpark, improving model accuracy for financial risk and loan processing use cases.</li>
-                <li>Implemented Python-based data validation pipelines using Pandas and Great Expectations, reducing data errors by 30%.</li>
-                <li>Collaborated with Data Scientists and ML Engineers to deploy AI models using Docker and CI/CD pipelines, increasing model inference speed by 25%.</li>
-                <li>Developed AI-powered analytics solutions with scikit-learn, TensorFlow, and MLflow, automating 15% of routine reporting tasks.</li>
-              </ul>
-              <div class="tech-tags">
-                <span class="tech-tag">Python</span><span class="tech-tag">PySpark</span><span class="tech-tag">Kafka</span>
-                <span class="tech-tag">Spark Streaming</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">MLflow</span>
-                <span class="tech-tag">Scikit-learn</span><span class="tech-tag">Hadoop HDFS</span><span class="tech-tag">Docker</span>
-                <span class="tech-tag">CI/CD</span><span class="tech-tag">Great Expectations</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-
-        <!-- Job 2 -->
-        <div class="row">
-          <div class="col-md-12 ftco-animate">
-            <div class="resume-wrap">
-              <span class="date">Nov 2023 – Aug 2025</span>
-              <h2>Azure Data Engineer</h2>
-              <span class="position">Continental Resources &mdash; Oklahoma, USA</span>
-              <ul>
-                <li>Engineered and optimized ETL workflows using Azure Data Factory and Talend to integrate data across Azure Data Lake, Blob Storage, and SQL Database.</li>
-                <li>Built scalable pipelines with Azure Databricks, PySpark, and Spark Streaming for real-time analytics; implemented Kafka, Snowflake, and API integrations for modern data lakehouse architectures.</li>
-                <li>Automated cloud resource provisioning using Terraform; enhanced query performance on Azure Synapse Analytics and Snowflake via indexing, partitioning, and clustering.</li>
-                <li>Deployed CI/CD pipelines using Jenkins, Docker, and Kubernetes, reducing deployment time and increasing system reliability.</li>
-                <li>Managed Snowflake data warehouse with governance and security controls; conducted data migration between on-premises and cloud using Azure Data Factory and SSIS.</li>
-                <li>Strengthened security and compliance via Azure Active Directory, RBAC, and Multi-Factor Authentication; scheduled workflows with Control-M and Airflow.</li>
-              </ul>
-              <div class="tech-tags">
-                <span class="tech-tag">Azure Data Factory</span><span class="tech-tag">Databricks</span><span class="tech-tag">PySpark</span>
-                <span class="tech-tag">Snowflake</span><span class="tech-tag">Azure Synapse</span><span class="tech-tag">Kafka</span>
-                <span class="tech-tag">Terraform</span><span class="tech-tag">Kubernetes</span><span class="tech-tag">Jenkins</span>
-                <span class="tech-tag">Control-M</span><span class="tech-tag">SSIS</span><span class="tech-tag">Tableau</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-
-        <!-- Job 3 -->
-        <div class="row">
-          <div class="col-md-12 ftco-animate">
-            <div class="resume-wrap">
-              <span class="date">Dec 2022 – Oct 2023</span>
-              <h2>AWS Data Engineer</h2>
-              <span class="position">BOK Financial Corporation &mdash; Tulsa, OK, USA</span>
-              <ul>
-                <li>Developed and optimized AWS Glue ETL pipelines and AWS AppFlow moving data between Amazon S3, Redshift, and Snowflake, improving data availability for downstream analytics.</li>
-                <li>Designed and deployed Python-based AWS Lambda functions to validate, cleanse, and transform streaming data, automating tasks and reducing manual effort.</li>
-                <li>Built and maintained Apache Spark applications with Scala and PySpark on EMR to process financial datasets at scale.</li>
-                <li>Engineered a Kafka event-driven architecture on AWS MSK to stream transactional data in real time; deployed containerized solutions with Kubernetes for high availability.</li>
-                <li>Automated AWS infrastructure provisioning using Terraform; implemented AWS IAM policies and RBAC for regulatory compliance.</li>
-                <li>Led data migration from Amazon Redshift to Snowflake; configured and monitored Control-M workflows for critical data jobs.</li>
-              </ul>
-              <div class="tech-tags">
-                <span class="tech-tag">AWS Glue</span><span class="tech-tag">S3</span><span class="tech-tag">Redshift</span>
-                <span class="tech-tag">Lambda</span><span class="tech-tag">EMR</span><span class="tech-tag">Snowflake</span>
-                <span class="tech-tag">Kafka (MSK)</span><span class="tech-tag">Spark / Scala</span><span class="tech-tag">Terraform</span>
-                <span class="tech-tag">Kubernetes</span><span class="tech-tag">AWS IAM</span><span class="tech-tag">SSIS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-
-        <!-- Job 4 -->
-        <div class="row">
-          <div class="col-md-12 ftco-animate">
-            <div class="resume-wrap">
-              <span class="date">Jun 2021 – Jul 2022</span>
-              <h2>Sr. GCP Data Engineer</h2>
-              <span class="position">Lloyds Banking Group &mdash; London, UK</span>
-              <ul>
-                <li>Designed and implemented data pipelines with Google Cloud Dataflow and Apache Beam, integrating Google Analytics 4 data for faster ingestion and transformation of large datasets.</li>
-                <li>Migrated Oracle databases to Google BigQuery, optimizing query performance and reducing latency for analytics workloads.</li>
-                <li>Automated ETL pipeline orchestration using GCP Cloud Composer (Airflow) workflows, reducing manual intervention and improving reliability.</li>
-                <li>Built real-time data streaming with Pub/Sub, Dataflow, and Apache Kafka; managed HBase NoSQL databases with PySpark for real-time processing.</li>
-                <li>Integrated Scikit-learn ML models into BigQuery ML to support fraud detection and risk analysis, enabling faster risk scoring.</li>
-                <li>Collaborated with cross-functional teams to modernize legacy ETL workflows, reducing processing times by 30%.</li>
-              </ul>
-              <div class="tech-tags">
-                <span class="tech-tag">BigQuery</span><span class="tech-tag">GCS</span><span class="tech-tag">Dataflow</span>
-                <span class="tech-tag">Apache Beam</span><span class="tech-tag">Pub/Sub</span><span class="tech-tag">Cloud Composer</span>
-                <span class="tech-tag">Cloud Functions</span><span class="tech-tag">HBase</span><span class="tech-tag">PySpark</span>
-                <span class="tech-tag">Scikit-learn</span><span class="tech-tag">Power BI</span><span class="tech-tag">Google Analytics 4</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-
-        <!-- Job 5 -->
-        <div class="row">
-          <div class="col-md-12 ftco-animate">
-            <div class="resume-wrap">
-              <span class="date">Oct 2017 – Jul 2019</span>
-              <h2>Data Engineer</h2>
-              <span class="position">Teleperformance &mdash; Hyderabad, India</span>
-              <ul>
-                <li>Designed and optimized ETL/ELT pipelines integrating high-volume data from multiple sources into Azure Data Lake, Blob Storage, and SQL Data Warehouse.</li>
-                <li>Implemented real-time data streaming using Kafka and Spark Streaming; created Databricks Spark jobs with PySpark for large-scale data transformation and ML model training.</li>
-                <li>Automated data migration from on-premises databases to Azure Data Lake Store using Azure Data Factory; integrated Apache Airflow for DAG-based pipeline orchestration.</li>
-                <li>Implemented CI/CD pipelines with Jenkins and Git; engineered SSRS reports with drill-down and parameterized capabilities for actionable business insights.</li>
-                <li>Ensured data consistency across Teradata, Oracle, and Azure SQL environments through comprehensive quality checks.</li>
-              </ul>
-              <div class="tech-tags">
-                <span class="tech-tag">Azure Data Factory</span><span class="tech-tag">Kafka</span><span class="tech-tag">Spark Streaming</span>
-                <span class="tech-tag">Databricks</span><span class="tech-tag">Apache Airflow</span><span class="tech-tag">Jenkins</span>
-                <span class="tech-tag">Kubernetes</span><span class="tech-tag">Docker</span><span class="tech-tag">Teradata</span>
-                <span class="tech-tag">SSRS</span><span class="tech-tag">Looker</span><span class="tech-tag">Python</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <br><br>
-
-        <!-- Education -->
-        <div class="row">
-          <h1 class="big-4">Education</h1>
-          <div class="underline"></div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-6 ftco-animate">
-            <div class="resume-wrap">
-              <span class="date">Aug 2022 – Sep 2023</span>
-              <h2>Master of Science &mdash; Computer Science</h2>
-              <span class="position">Oklahoma Christian University, USA</span>
-              <p class="mt-4">Graduate studies with focus on data systems, distributed computing, and applied machine learning.</p>
-            </div>
-          </div>
-          <div class="col-md-6 ftco-animate">
-            <div class="resume-wrap">
-              <span class="date">2015 – 2019</span>
-              <h2>Bachelor of Engineering</h2>
-              <span class="position">Sri Venkateswara College of Engineering Technology, India</span>
-              <p class="mt-4">Undergraduate degree in engineering with first class distinction.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center mt-5">
-          <div class="col-md-6 text-center ftco-animate">
-            <p><a href="Resume/Sateesh-DE.pdf" class="btn btn-primary py-4 px-5" download>Download Resume</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CERTIFICATIONS ===== -->
-    <section class="ftco-section" id="certifications-section" style="background-color: #f8f9fa;">
-      <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Certs</h1>
-            <h2 class="mb-4">Certifications</h2>
-            <p>Industry-recognized certifications validating expertise across all three major cloud platforms and the Databricks ecosystem.</p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6 col-lg-4 col-xl-20p ftco-animate" style="--col-xl-w: 20%;">
-            <div class="cert-card">
-              <div class="cert-icon icon-databricks">DB</div>
-              <h5>Databricks Certified</h5>
-              <p>Generative AI Engineer Associate</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl ftco-animate">
-            <div class="cert-card">
-              <div class="cert-icon icon-databricks">DB</div>
-              <h5>Databricks Certified</h5>
-              <p>Data Engineer Associate</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl ftco-animate">
-            <div class="cert-card">
-              <div class="cert-icon icon-azure">Az</div>
-              <h5>Microsoft Certified</h5>
-              <p>Azure Data Fundamentals (DP-900)</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl ftco-animate">
-            <div class="cert-card">
-              <div class="cert-icon icon-gcp">GCP</div>
-              <h5>Google Cloud Certified</h5>
-              <p>Associate Cloud Engineer</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl ftco-animate">
-            <div class="cert-card">
-              <div class="cert-icon icon-aws">AWS</div>
-              <h5>AWS Certified</h5>
-              <p>Data Engineer &ndash; Associate</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== COUNTERS ===== -->
-    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-        <div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="7">0</strong>
-                <span>Years Experience</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="5">0</strong>
-                <span>Certifications</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="3">0</strong>
-                <span>Cloud Platforms</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="5">0</strong>
-                <span>Companies</span>
-              </div>
-            </div>
-          </div>
+          <div class="tl-tags"><span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">Kafka</span><span class="tag">Spark Streaming</span><span class="tag">TensorFlow</span><span class="tag">MLflow</span><span class="tag">Hadoop HDFS</span><span class="tag">Docker</span><span class="tag">Great Expectations</span></div>
         </div>
       </div>
 
-      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-        <div class="row justify-content-center">
-          <div class="col-md-7 ftco-animate text-center">
-            <h2>More projects on <span>GitHub</span></h2>
-            <div class="heading">
-              <h4>Building reliable data pipelines &amp; unlocking insights at scale</h4>
-              <br>
-              <p><a href="https://github.com/Sateesh1209" class="btn btn-primary py-3 px-5" target="_blank">GitHub Profile</a></p>
-            </div>
+      <div class="tl-item fi">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-hd">
+            <div class="tl-role">Azure Data Engineer</div>
+            <div class="tl-date">Nov 2023 – Aug 2025</div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Get In Touch</h2>
-            <p>Open to senior data engineering and AI/ML data engineering opportunities. Feel free to reach out!</p>
-          </div>
-        </div>
-
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-map-signs"></span>
-              </div>
-              <h3 class="mb-4">Location</h3>
-              <p>Plano, TX, USA</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-phone2"></span>
-              </div>
-              <h3 class="mb-4">Phone</h3>
-              <p><a href="tel:4054134413">+1 (405) 413-4413</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-paper-plane"></span>
-              </div>
-              <h3 class="mb-4">Email</h3>
-              <p><a href="mailto:Sateesh195.n@gmail.com">Sateesh195.n@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <div class="align-self-stretch box p-4 text-center">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-globe"></span>
-              </div>
-              <h3 class="mb-4">Resume</h3>
-              <p><a href="Resume/Sateesh-DE.pdf" download>Download PDF</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="container">
-          <br>
-          <div class="row justify-content-center">
-            <div class="col-md-7 ftco-animate text-center">
-              <h2>Connect on <span>LinkedIn</span>
-                <a href="https://www.linkedin.com/in/sateesh-nunna/" class="btn btn-primary py-3 px-5 ml-3" target="_blank">LinkedIn</a>
-              </h2>
-            </div>
-          </div>
-          <br>
-          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-            <li class="ftco-animate normal-txt">Find me on &nbsp;</li>
-            <li class="ftco-animate"><a href="https://www.linkedin.com/in/sateesh-nunna/" target="_blank"><span class="icon-linkedin"></span></a></li>
-            <li class="ftco-animate"><a href="https://github.com/Sateesh1209" target="_blank"><span class="icon-github"></span></a></li>
+          <div class="tl-co">Continental Resources</div>
+          <div class="tl-loc"><i class="fas fa-map-marker-alt"></i>Oklahoma, USA</div>
+          <ul class="tl-ul">
+            <li>Engineered ETL workflows with Azure Data Factory &amp; Talend integrating Azure Data Lake, Blob Storage, and SQL Database.</li>
+            <li>Built scalable Databricks + PySpark + Spark Streaming pipelines; implemented Kafka + Snowflake modern lakehouse architecture.</li>
+            <li>Automated cloud infra with Terraform; optimised Synapse Analytics &amp; Snowflake queries via partitioning and clustering strategies.</li>
+            <li>Deployed CI/CD with Jenkins, Docker &amp; Kubernetes; hardened security via AAD, RBAC, and MFA compliance.</li>
           </ul>
-          <br>
+          <div class="tl-tags"><span class="tag">Azure Data Factory</span><span class="tag">Databricks</span><span class="tag">Snowflake</span><span class="tag">Azure Synapse</span><span class="tag">Terraform</span><span class="tag">Kubernetes</span><span class="tag">Jenkins</span><span class="tag">Control-M</span></div>
         </div>
       </div>
-    </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>
-              &copy; <script>document.write(new Date().getFullYear());</script> Sateesh Kumar Nunna &mdash; Senior Data Engineer.
-              Template by <a href="https://colorlib.com" target="_blank">Colorlib</a> (CC BY 3.0).
-            </p>
+      <div class="tl-item fi">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-hd">
+            <div class="tl-role">AWS Data Engineer</div>
+            <div class="tl-date">Dec 2022 – Oct 2023</div>
           </div>
+          <div class="tl-co">BOK Financial Corporation</div>
+          <div class="tl-loc"><i class="fas fa-map-marker-alt"></i>Tulsa, OK, USA</div>
+          <ul class="tl-ul">
+            <li>Developed AWS Glue ETL pipelines and AppFlow moving data between S3, Redshift, and Snowflake.</li>
+            <li>Built Python-based Lambda functions for streaming validation; Spark/Scala apps on EMR for financial datasets.</li>
+            <li>Engineered Kafka event-driven architecture on AWS MSK; automated infra with Terraform; implemented IAM &amp; RBAC compliance.</li>
+            <li>Led Redshift → Snowflake migration; deployed containerised solutions on Kubernetes for high availability.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">AWS Glue</span><span class="tag">S3</span><span class="tag">Redshift</span><span class="tag">Lambda</span><span class="tag">EMR</span><span class="tag">Snowflake</span><span class="tag">Kafka MSK</span><span class="tag">Terraform</span><span class="tag">Kubernetes</span></div>
         </div>
       </div>
-    </footer>
 
-    <!-- Loader -->
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
-      </svg>
+      <div class="tl-item fi">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-hd">
+            <div class="tl-role">Sr. GCP Data Engineer</div>
+            <div class="tl-date">Jun 2021 – Jul 2022</div>
+          </div>
+          <div class="tl-co">Lloyds Banking Group</div>
+          <div class="tl-loc"><i class="fas fa-map-marker-alt"></i>London, UK</div>
+          <ul class="tl-ul">
+            <li>Designed pipelines with Google Cloud Dataflow &amp; Apache Beam integrating Google Analytics 4 data at scale.</li>
+            <li>Migrated Oracle → BigQuery; automated ETL orchestration with GCP Cloud Composer (Airflow).</li>
+            <li>Built Pub/Sub + Dataflow real-time streaming for financial risk; integrated Scikit-learn ML into BigQuery ML for fraud detection.</li>
+            <li>Collaborated to modernise legacy ETL workflows, reducing processing times by <strong>30%</strong>.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">BigQuery</span><span class="tag">Dataflow</span><span class="tag">Apache Beam</span><span class="tag">Pub/Sub</span><span class="tag">Cloud Composer</span><span class="tag">Scikit-learn</span><span class="tag">Power BI</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item fi">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-hd">
+            <div class="tl-role">Data Engineer</div>
+            <div class="tl-date">Oct 2017 – Jul 2019</div>
+          </div>
+          <div class="tl-co">Teleperformance</div>
+          <div class="tl-loc"><i class="fas fa-map-marker-alt"></i>Hyderabad, India</div>
+          <ul class="tl-ul">
+            <li>Designed ETL/ELT pipelines integrating high-volume data into Azure Data Lake, Blob Storage, and SQL Data Warehouse.</li>
+            <li>Built Kafka + Spark Streaming pipelines; deployed Databricks PySpark jobs for large-scale transformation and ML training.</li>
+            <li>Orchestrated end-to-end pipelines with Apache Airflow DAGs; implemented CI/CD with Jenkins and Git.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">Azure Data Factory</span><span class="tag">Kafka</span><span class="tag">Databricks</span><span class="tag">Airflow</span><span class="tag">Jenkins</span><span class="tag">Docker</span></div>
+        </div>
+      </div>
+
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <!-- Education -->
+    <div style="margin-top:60px">
+      <div class="sec-head" style="margin-bottom:30px">
+        <div class="sec-label">Academic Background</div>
+        <h2 class="sec-title">Education</h2>
+      </div>
+      <div class="tl">
+        <div class="tl-item fi">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-hd"><div class="tl-role">M.S. Computer Science</div><div class="tl-date">Aug 2022 – Sep 2023</div></div>
+            <div class="tl-co">Oklahoma Christian University</div>
+            <div class="tl-loc"><i class="fas fa-map-marker-alt"></i>Oklahoma, USA</div>
+            <p style="font-size:.85rem;color:var(--muted);margin-top:8px">Focus on distributed systems, data engineering, and applied machine learning. First class distinction.</p>
+          </div>
+        </div>
+        <div class="tl-item fi">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-hd"><div class="tl-role">Bachelor of Engineering</div><div class="tl-date">2015 – 2019</div></div>
+            <div class="tl-co">Sri Venkateswara College of Engineering Technology</div>
+            <div class="tl-loc"><i class="fas fa-map-marker-alt"></i>India</div>
+            <p style="font-size:.85rem;color:var(--muted);margin-top:8px">Undergraduate engineering degree. First class distinction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section id="certs" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">Credentials</div>
+      <h2 class="sec-title">Certifications</h2>
+      <p class="sec-sub">Certified across AWS, Azure, GCP, and the Databricks AI ecosystem — rare triple-cloud validated expertise.</p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert fi"><div class="cert-ico ic-db">AI</div><div class="cert-prov">Databricks</div><div class="cert-name">Generative AI Engineer Associate</div></div>
+      <div class="cert fi"><div class="cert-ico ic-db">DE</div><div class="cert-prov">Databricks</div><div class="cert-name">Data Engineer Associate</div></div>
+      <div class="cert fi"><div class="cert-ico ic-az">Az</div><div class="cert-prov">Microsoft</div><div class="cert-name">Azure Data Fundamentals (DP-900)</div></div>
+      <div class="cert fi"><div class="cert-ico ic-gcp">GCP</div><div class="cert-prov">Google Cloud</div><div class="cert-name">Associate Cloud Engineer</div></div>
+      <div class="cert fi"><div class="cert-ico ic-aws">AWS</div><div class="cert-prov">Amazon Web Services</div><div class="cert-name">Data Engineer – Associate</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESUME ═══ -->
+<section id="resume-sec" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">Full CV</div>
+      <h2 class="sec-title">My Resume</h2>
+      <p class="sec-sub">View or download the full resume below.</p>
+    </div>
+    <div class="res-wrap">
+      <div class="res-acts">
+        <a href="Resume/Sateesh-DE.pdf" download class="btn btn-p"><i class="fas fa-download"></i> Download PDF</a>
+        <a href="Resume/Sateesh-DE.pdf" target="_blank" class="btn btn-s"><i class="fas fa-external-link-alt"></i> Open in New Tab</a>
+      </div>
+      <div class="res-embed fi">
+        <iframe src="Resume/Sateesh-DE.pdf" title="Sateesh Kumar Nunna Resume" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-label">Let's Talk</div>
+      <h2 class="sec-title">Contact</h2>
+    </div>
+    <div class="ct-grid">
+      <div class="fi">
+        <h3 class="ct-h3">Open to <span class="grad-text">Opportunities</span></h3>
+        <p class="ct-p">Actively seeking senior data engineering and AI/ML roles. Whether full-time, contract, or a quick introduction — reach out and I'll respond promptly.</p>
+        <div class="ct-row"><div class="ct-ico"><i class="fas fa-envelope"></i></div><div><div class="lbl">Email</div><div class="val"><a href="mailto:Sateesh195.n@gmail.com">Sateesh195.n@gmail.com</a></div></div></div>
+        <div class="ct-row"><div class="ct-ico"><i class="fas fa-phone"></i></div><div><div class="lbl">Phone</div><div class="val"><a href="tel:4054134413">+1 (405) 413-4413</a></div></div></div>
+        <div class="ct-row"><div class="ct-ico"><i class="fab fa-linkedin-in"></i></div><div><div class="lbl">LinkedIn</div><div class="val"><a href="https://www.linkedin.com/in/sateesh-kumar-7445aa31a/" target="_blank">linkedin.com/in/sateesh-kumar-7445aa31a</a></div></div></div>
+        <div class="ct-row"><div class="ct-ico"><i class="fab fa-github"></i></div><div><div class="lbl">GitHub</div><div class="val"><a href="https://github.com/Sateesh1209" target="_blank">github.com/Sateesh1209</a></div></div></div>
+        <div class="ct-row"><div class="ct-ico"><i class="fas fa-map-marker-alt"></i></div><div><div class="lbl">Location</div><div class="val">Plano, TX, USA</div></div></div>
+        <div class="soc-links">
+          <a href="https://www.linkedin.com/in/sateesh-kumar-7445aa31a/" target="_blank" class="soc-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Sateesh1209" target="_blank" class="soc-btn"><i class="fab fa-github"></i></a>
+          <a href="mailto:Sateesh195.n@gmail.com" class="soc-btn"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="fi">
+        <div class="avail-card">
+          <div class="avail-badge"><span class="dot-live"></span>Available for New Roles</div>
+          <h3 class="avail-h3">Let's Build Something <span class="grad-text">Great</span></h3>
+          <p class="avail-p">Senior Data Engineer with triple-cloud certifications (AWS + Azure + GCP), 7+ years in financial services, and expertise in real-time streaming, data lakehouse architectures, and AI/ML pipeline integration.</p>
+          <div class="cta-stk">
+            <a href="https://www.linkedin.com/in/sateesh-kumar-7445aa31a/" target="_blank" class="btn btn-p"><i class="fab fa-linkedin-in"></i> Connect on LinkedIn</a>
+            <a href="mailto:Sateesh195.n@gmail.com" class="btn btn-s"><i class="fas fa-envelope"></i> Send Email</a>
+            <a href="Resume/Sateesh-DE.pdf" download class="btn btn-g"><i class="fas fa-download"></i> Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <p>&copy; <span id="yr"></span> Sateesh Kumar Nunna — AI Data Engineer —
+      <a href="mailto:Sateesh195.n@gmail.com">Sateesh195.n@gmail.com</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+// ── PARTICLES CANVAS ──
+(function(){
+  const c=document.getElementById('cv'),x=c.getContext('2d');
+  let pts=[];const N=75;
+  function rs(){c.width=c.offsetWidth;c.height=c.offsetHeight}
+  window.addEventListener('resize',rs);rs();
+  function rnd(a,b){return Math.random()*(b-a)+a}
+  for(let i=0;i<N;i++)pts.push({x:rnd(0,c.width),y:rnd(0,c.height),vx:rnd(-.25,.25),vy:rnd(-.25,.25),r:rnd(1,2.2),a:rnd(.2,.65)});
+  function draw(){
+    x.clearRect(0,0,c.width,c.height);
+    pts.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>c.width)p.vx*=-1;
+      if(p.y<0||p.y>c.height)p.vy*=-1;
+      x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);
+      x.fillStyle=`rgba(0,212,255,${p.a})`;x.fill();
+    });
+    for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<115){x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);
+        x.strokeStyle=`rgba(0,212,255,${.1*(1-d/115)})`;x.lineWidth=.7;x.stroke();}
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ── TYPED TEXT ──
+(function(){
+  const el=document.getElementById('tt');
+  const texts=['AI Data Engineer','Azure Data Engineer','AWS Data Engineer','GCP Data Engineer','Big Data Architect','ML Pipeline Engineer'];
+  let ti=0,ci=0,del=false;
+  function run(){
+    const t=texts[ti];
+    if(!del){el.textContent=t.slice(0,++ci);if(ci===t.length){del=true;setTimeout(run,1900);return;}}
+    else{el.textContent=t.slice(0,--ci);if(ci===0){del=false;ti=(ti+1)%texts.length;}}
+    setTimeout(run,del?38:82);
+  }
+  run();
+})();
+
+// ── NAVBAR ──
+const nav=document.getElementById('nav'),ham=document.getElementById('ham'),nu=document.getElementById('nu'),btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('sc',scrollY>50);
+  btt.classList.toggle('on',scrollY>400);
+  let cur='';
+  document.querySelectorAll('section[id]').forEach(s=>{if(scrollY>=s.offsetTop-110)cur=s.id;});
+  document.querySelectorAll('.nav-ul a[href^="#"]').forEach(a=>{a.classList.toggle('act',a.getAttribute('href')==='#'+cur);});
+},{passive:true});
+ham.addEventListener('click',()=>nu.classList.toggle('open'));
+nu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nu.classList.remove('open')));
+
+// ── FADE-IN OBSERVER ──
+const obs=new IntersectionObserver((es)=>{
+  es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*90);obs.unobserve(e.target);}});
+},{threshold:.1});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+
+// ── COUNTERS ──
+const cobs=new IntersectionObserver((es)=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      const tgt=+e.target.dataset.t,step=tgt/40;let v=0;
+      const t=setInterval(()=>{v=Math.min(v+step,tgt);e.target.textContent=Math.floor(v);if(v>=tgt)clearInterval(t);},40);
+      cobs.unobserve(e.target);
+    }
+  });
+},{threshold:.5});
+document.querySelectorAll('.cnt').forEach(el=>cobs.observe(el));
+
+// ── FOOTER YEAR ──
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
 </html>
